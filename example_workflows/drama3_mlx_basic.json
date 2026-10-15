@@ -1,0 +1,181 @@
+{
+ "last_node_id": 4,
+ "last_link_id": 3,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "Drama3MLXLoader",
+   "pos": [
+    50,
+    50
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "DRAMA3_MLX",
+     "type": "DRAMA3_MLX",
+     "links": [
+      1
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "Drama3MLXLoader"
+   },
+   "widgets_values": [
+    "mlx-community/fish-audio-drama-3-4bit"
+   ]
+  },
+  {
+   "id": 2,
+   "type": "LoadAudio",
+   "pos": [
+    50,
+    300
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      2
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "LoadAudio"
+   },
+   "widgets_values": [
+    "public_ref.wav",
+    null,
+    ""
+   ]
+  },
+  {
+   "id": 3,
+   "type": "Drama3MLXGenerate",
+   "pos": [
+    420,
+    50
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "drama3",
+     "type": "DRAMA3_MLX",
+     "link": 1
+    },
+    {
+     "name": "ref_audio",
+     "type": "AUDIO",
+     "link": 2
+    }
+   ],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      3
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "Drama3MLXGenerate"
+   },
+   "widgets_values": [
+    "Well, that went better than expected. [laughs] Let's do it again.",
+    11,
+    "fixed",
+    1.0,
+    0.95,
+    30,
+    600,
+    "REPLACE with transcript of ref"
+   ]
+  },
+  {
+   "id": 4,
+   "type": "SaveAudio",
+   "pos": [
+    800,
+    50
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 3
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "Node name for S&R": "SaveAudio"
+   },
+   "widgets_values": [
+    "drama3_mlx"
+   ]
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   3,
+   0,
+   "DRAMA3_MLX"
+  ],
+  [
+   2,
+   2,
+   0,
+   3,
+   1,
+   "AUDIO"
+  ],
+  [
+   3,
+   3,
+   0,
+   4,
+   0,
+   "AUDIO"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {},
+ "version": 0.4
+}

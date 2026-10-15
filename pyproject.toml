@@ -1,0 +1,9 @@
+[project]
+name = "comfyui-drama3-mlx"
+version = "0.1.0"
+description = "Fish Audio Drama 3 TTS on Apple Silicon (MLX) for ComfyUI"
+license = { text = "MIT (wrapper); model under Fish Audio Community License" }
+dependencies = ["mlx-audio", "soundfile", "numpy"]
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Drama3-MLX"

@@ -1,0 +1,3 @@
+mlx-audio @ git+https://github.com/Blaizzy/mlx-audio@dad2087
+soundfile
+numpy

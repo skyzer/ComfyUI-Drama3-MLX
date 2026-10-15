@@ -1,0 +1,44 @@
+{
+ "1": {
+  "class_type": "Drama3MLXLoader",
+  "inputs": {
+   "model": "mlx-community/fish-audio-drama-3-4bit"
+  }
+ },
+ "2": {
+  "class_type": "LoadAudio",
+  "inputs": {
+   "audio": "public_ref.wav"
+  }
+ },
+ "3": {
+  "class_type": "Drama3MLXGenerate",
+  "inputs": {
+   "drama3": [
+    "1",
+    0
+   ],
+   "text": "Well, that went better than expected. [laughs] Let's do it again.",
+   "seed": 11,
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "top_k": 30,
+   "max_frames": 600,
+   "ref_audio": [
+    "2",
+    0
+   ],
+   "ref_text": "REPLACE with transcript of ref"
+  }
+ },
+ "4": {
+  "class_type": "SaveAudio",
+  "inputs": {
+   "audio": [
+    "3",
+    0
+   ],
+   "filename_prefix": "drama3_mlx"
+  }
+ }
+}

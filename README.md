@@ -2,7 +2,7 @@
 
 ComfyUI nodes that run [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) natively on Apple Silicon through [mlx-audio](https://github.com/Blaizzy/mlx-audio). No CUDA needed.
 
-Sample, generated on an M5 Max with the 4-bit model and the LJ Speech public-domain reference voice: [▶ sample.wav](samples/mlx_public_s11.wav)
+Sample, generated on an M5 Max with the 4-bit model and the LJ Speech public-domain reference voice: [▶ play in browser](https://skyzer.github.io/ComfyUI-Drama3-MLX/) · [mp4](samples/mp4/mlx_public_s11.mp4) · [wav](samples/mlx_public_s11.wav)
 
 ## Install
 ```bash
